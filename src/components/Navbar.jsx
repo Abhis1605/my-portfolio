@@ -1,5 +1,5 @@
 'use client'
-import { Download, Menu, MoveUpRight } from "lucide-react"
+import {  Menu, MoveUpRight } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
@@ -32,14 +32,14 @@ export default function Navbar() {
             <nav className="hidden lg:flex space-x-5 menu-link relative z-40">
 
                 {navLinks.map((link) => (
-                    <Link key={link.label} href={link.href} className="font-display tracking-widest text-white hover:text-blue-600  font-bold transition-all duration-300">
+                    <Link key={link.label} href={link.href} className="font-display uppercase text-xs tracking-widest text-white hover:text-blue-600  font-bold transition-all duration-300">
                         {link.label}
                     </Link>
                 ))}
             </nav>
 
             <div className="flex items-center gap-4">
-                <Link className="flex items-center gap-2 px-5 py-1 text-sm bg-transparent text-white border-2 hover:bg-white font-display tracking-widest hover:text-accent transition-all duration-300 hover:border-none hover:scale-95" href="/">
+                <Link className="flex items-center gap-2 px-5 py-1 text-sm uppercase bg-transparent text-white border-2 hover:bg-white font-display tracking-widest hover:text-accent transition-all duration-300 hover:border-none hover:scale-95" href="/">
                     <MoveUpRight className="w-4 h-4 " />
                     Resume
                 </Link>
