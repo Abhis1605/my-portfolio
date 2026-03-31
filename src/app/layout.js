@@ -1,4 +1,4 @@
-import { DM_Sans, DM_Serif_Display} from "next/font/google";
+import { DM_Sans, DM_Serif_Display, Syne} from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -12,6 +12,11 @@ const dmSerif = DM_Serif_Display({
   variable: "--font-display"
 })
 
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-logo"
+})
+
 export const metadata = {
   title: "Abhi Solanki - Developer",
   description: "MERN Stack Developer Portfolio"
@@ -22,7 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${dmSerif.variable} h-full antialiased`}
+      className={`${dmSans.variable} ${dmSerif.variable} ${syne.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

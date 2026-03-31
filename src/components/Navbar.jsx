@@ -25,8 +25,8 @@ export default function Navbar() {
 
         <div className={`w-full flex items-center justify-between transition-all duration-500 ${isFixed ? "px-[8%] lg:px-[16%]" : "px-[8%] lg:px-[5%]"}`}>
 
-            <Link href="/" className="text-2xl md:text-3xl lg:text-3xl font-semibold text-white font-display">
-                Abhi<span className="font-display  text-(--color-surface-2)">.dev</span>
+            <Link href="/" className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white syne  text-shadow-sm text-shadow-muted">
+                Abhi<span className="text-(--color-surface-2)">.dev</span>
             </Link>
 
             <nav className="hidden lg:flex space-x-5 menu-link relative z-40">
@@ -47,7 +47,7 @@ export default function Navbar() {
 
             <div className="lg:hidden flex items-center justify-between gap-4">
                 <button className="text-2xl focus:outline-none" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-                    <Menu className="w-5 h-5" />
+                    <Menu className="lg:w-5 lg:h-5" />
                 </button>
             </div>
 
