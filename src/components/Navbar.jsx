@@ -21,9 +21,9 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
   return (
-    <div className={`w-full transition-all py-5 duration-500 fixed top-0 left-0 z-50 fixed-nav ${isFixed ? "bg-black" : "bg-transparent"}`}>
+    <div className={`w-full transition-all duration-500 fixed top-0 left-0 z-50 fixed-nav ${isFixed ? "bg-white/10 backdrop-blur-xs py-3" : "bg-transparent py-5 "}`}>
 
-        <div className={`w-full flex items-center justify-between transition-all duration-500 ${isFixed ? "px-[8%] lg:px-[16%]" : "px-[8%] lg:px-[5%]"}`}>
+        <div className={`w-full flex items-center justify-between transition-all duration-500 ${isFixed ? "px-[8%] lg:px-[8%]" : "px-[8%] lg:px-[5%]"}`}>
 
             <Link href="/" className="text-lg md:text-2xl lg:text-2xl font-extrabold text-white syne  text-shadow-sm text-shadow-muted">
                 Abhi<span className="text-(--color-surface-2)">.dev</span>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0d0d0d;
+  --background: #1F2120;
   --foreground: #f0ede8;
 
   --accent: #f06030;        /* your primary orange */
@@ -69,6 +69,7 @@ h1, h2, h3, h4 {
     transparent
   );
 }
+
 
 @media (max-width: 1024px) {
   .hero-header{
