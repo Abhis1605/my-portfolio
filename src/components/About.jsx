@@ -6,8 +6,8 @@ export default function About() {
     <section id="about" className="px-[8%] lg:px-[5%] py-10 lg:py-20">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="flex md:items-center lg:items-start  flex-col">
-          <h1 className="text-6xl text-center lg:text-8xl  mb-6">ABOUT ME</h1>
-          <p className="text-justify md:text-2xl lg:text-base text-muted  lg:w-[85%] mb-6">
+          <h1 className="text-6xl text-center tracking-widest mb-6">ABOUT ME</h1>
+          <p className="text-justify md:text-center lg:text-justify md:text-2xl lg:text-base text-muted  lg:w-[85%] mb-6">
             I’m a computer engineering student and a MERN stack developer,
             focused on building clean and functional web applications. I enjoy
             working on real-world projects and continuously improving my
@@ -22,13 +22,13 @@ export default function About() {
           />
         </div>
 
-        <div className="relative p-4 flex items-center justify-center">
+        <div className="relative p-4 flex flex-col md:flex-row lg:flex-row items-center justify-center">
                 
-                <div  className=" w-full h-85 md:w-80 md:h-80 lg:w-80 lg:h-80 flex items-center justify-center z-2 bg-background absolute -bottom-140 md:-bottom-130 md:left-0 lg:bottom-0 lg:left-0">
-                    <Image  src="/about-img/img-2.jpg" height={300} width={300} alt="my-img-2" />
+                <div  className=" w-full h-85 md:w-80 md:h-80 lg:w-80 lg:h-80 flex items-center justify-center z-2 bg-background lg:absolute  lg:bottom-0 lg:left-0">
+                    <Image className="w-62.5 h-62.5 lg:w-75 lg:h-75"  src="/about-img/img-2.jpg" height={300} width={300} alt="my-img-2" />
                 </div>
         
-                <Image className="absolute top-10 md:top-20 md:right-15 lg:top-20 lg:right-0" src="/about-img/img-3.jpg" height={300} width={400} alt="my-img-3" />
+                <Image className="w-62.5 h-62.5 lg:w-100 lg:h-90 lg:absolute lg:top-20 lg:right-0" src="/about-img/img-3.jpg" height={300} width={400} alt="my-img-3"  />
         </div>
 
         
