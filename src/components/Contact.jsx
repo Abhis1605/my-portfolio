@@ -1,9 +1,60 @@
+"use client"
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { SlSocialLinkedin, SlSocialGithub, SlSocialInstagram  } from "react-icons/sl";
-import React from "react";
+import emailjs from "emailjs-com";
+import React, { useState } from "react";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
 export default function Contact() {
+
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: ""
+    })
+    const [status, setStatus] = useState({ type: "", message: "" })
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData, [e.target.name]: e.target.value
+        })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        if (!formData.name || !formData.email || !formData.message) {
+            toast.error("Fill all fields")
+            return
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            toast.error("Please enter a valid email")
+            return
+        }
+
+        setStatus({ type: "loading", message: ""})
+        emailjs.send(
+            "service_e66oo7m",
+            "template_prbnowl",
+            formData,
+            "Wv310UBx2m2iV4wKB"
+        ).then(() => {
+            toast.success("Message sent successfully!!")
+            setFormData({
+                name: "",
+                email: "",
+                message: ""
+            })
+            setStatus({ type: "", message: ""})
+        })
+        .catch(() => {
+            toast.error("Something went wrong")
+            setStatus({ type: "", message: ""})
+        })
+    }
   return (
     <section id="contact" className="py-10 lg:py-20">
       <div className="px-[8%] lg:px-[5%]">
@@ -26,7 +77,7 @@ export default function Contact() {
                 <Mail className="w-5 h-5 text-accent" />
               </div>
               <p>
-                Email: <a href="mailto:abhi85076@gmail.com" target="_blank">
+                Email: <a href="mailto:abhi85076@gmail.com">
                     abhi85076@gmail.com
                 </a>
               </p>
@@ -36,7 +87,7 @@ export default function Contact() {
                 <Phone className="w-5 h-5 text-accent" />
               </div>
               <p>
-                Phone: <a href="tel:+91-7990184694" target="_blank">
+                Phone: <a href="tel:+91-7990184694">
                     +91-7990184694
                 </a>
               </p>
@@ -75,23 +126,28 @@ export default function Contact() {
             <h3 className="text-2xl text-center">
                 Send a Message
             </h3>
-            <form className="">
+            <form onSubmit={handleSubmit} className="">
                 <div className="flex flex-col items-center mt-4 gap-2 px-4 lg:px-0">
-                    <label htmlFor="name" className="">
+                    <label htmlFor="name">
                         Your Name
                     </label>
-                    <input placeholder="John Doe" type="text" id="name" name="name" required className="w-full px-4 py-2 rounded-md border border-accent bg-background focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-0" />
+                    <input placeholder="John Doe" type="text" id="name" value={formData.name} onChange={handleChange} name="name" required className="w-full px-4 py-2 rounded-md border border-accent bg-background focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-0" />
                     <label htmlFor="email">Your Email</label>
-                    <input placeholder="johndoe@example.com" type="text" id="email" name="email" required className="w-full px-4 py-2 rounded-md border border-accent bg-background focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-0" />
+                    <input value={formData.email} onChange={handleChange} placeholder="johndoe@example.com" type="email" id="email" name="email" required className="w-full px-4 py-2 rounded-md border border-accent bg-background focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-0" />
                     <label htmlFor="message">Your Message</label>
-                    <textarea placeholder="Hello, How are you!!" name="message" id="message" required className="w-full px-4 py-2 rounded-md border border-accent bg-background focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-0" />
+                    <textarea value={formData.message} onChange={handleChange} placeholder="Hello, How are you!!" name="message" id="message" required className="w-full px-4 py-2 rounded-md border border-accent bg-background focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-0" />
                 </div>
                 <div className="flex items-center justify-center mt-6">
-                    <button className="cursor-pointer px-4 rounded-full gap-2 flex items-center py-2 text-white border-2 border-accent transition-colors duration-300 text-lg hover:text-accent hover:bg-white hover:border-0 hover:scale-95" type="submit">
+                    <button disabled={status.type === "loading"} className="cursor-pointer px-4 rounded-full gap-2 flex items-center py-2 text-white border-2 border-accent transition-colors duration-300 text-lg hover:text-accent hover:bg-white hover:border-0 hover:scale-95" type="submit">
                     Send <Send className="w-4 h-4" />
                 </button>
                 </div>
             </form>
+            {status.message && (
+                <p className={`mt-4 text-center ${status.type === "error" ? "text-red-500" : "text-green-500"}`}>
+                    {status.message}
+                </p>
+            )}
           </div>
         </div>
       </div>
