@@ -4,8 +4,8 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <>
-        <div className='px-[8%] lg:px-[5%] hero-header' id='home'>
+   <section id='home'>
+    <div  className='px-[8%] lg:px-[5%] hero-header' id='home'>
 
             <div className='z-20 mt-30 lg:mt-100 flex flex-col  lg:flex-row lg:items-end lg:justify-between  gap-4 md:gap-8 lg:gap-8'>
 
@@ -42,6 +42,6 @@ export default function Hero() {
 
 
         </div>
-    </>
+   </section>
   )
 }

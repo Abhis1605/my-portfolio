@@ -6,7 +6,7 @@ export default function About() {
     <section id="about" className="px-[8%] lg:px-[5%] py-10 lg:py-20">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="flex md:items-center lg:items-start  flex-col">
-          <h1 className="text-6xl text-center tracking-widest mb-6">ABOUT ME</h1>
+          <h1 className=" text-4xl md:text-5xl lg:text-6xl text-center tracking-widest mb-6">ABOUT ME</h1>
           <p className="text-center font-semibold lg:text-justify md:text-2xl lg:text-base text-muted  lg:w-[85%] mb-6">
             I’m a computer engineering student and a MERN stack developer,
             focused on building clean and functional web applications. I enjoy

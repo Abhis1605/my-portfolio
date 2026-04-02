@@ -1,4 +1,5 @@
-import { Move, MoveUpRight } from 'lucide-react'
+import { ExternalLink, } from 'lucide-react'
+import { SiGithub } from "react-icons/si";
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -119,16 +120,8 @@ export default function ProjectCard() {
               </div>
             ))}
           </div>
-          <div className='flex gap-3 '>
-            <Link target='_blank' className='flex px-3 py-2 bg-accent text-sm items-center justify-center gap-1 rounded-full hover:bg-white hover:text-accent transition-colors duration-300' href={project.live}>
-            Live <MoveUpRight className='w-3 h-3' />
-          </Link>
-          <Link target='_blank' className='flex px-3 py-2 bg-accent text-sm items-center justify-center gap-1 rounded-full hover:bg-white hover:text-accent transition-colors duration-300' href={project.github}>
-            GitHub <MoveUpRight className='w-3 h-3' />
-          </Link>
-          </div>
         </div>
-      <div className='mt-2'>
+      <div >
         <p className='text-xs text-muted'>What I learned:</p>
         <ol className='list-disc text-xs text-muted pl-4'>
             {project.learned.map((item, index) => (
@@ -137,6 +130,15 @@ export default function ProjectCard() {
               </li>
             ))}
         </ol>
+      </div>
+
+      <div className='flex mt-2 gap-3 '>
+          <Link target='_blank' href={project.live} className='bg-background flex items-center justify-center rounded-full transition-all duration-300 w-10 h-10 hover:bg-accent hover:scale-95'>
+            <ExternalLink className='w-5 h-5'  />
+          </Link>
+          <Link className='bg-background flex items-center justify-center rounded-full transition-all duration-300 w-10 h-10 hover:bg-accent hover:scale-95' target='_blank' href={project.github}>
+            <SiGithub className='w-5 h-5' />
+          </Link>
       </div>
       
     </div>

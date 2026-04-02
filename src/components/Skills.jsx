@@ -71,7 +71,7 @@ export default function Skills() {
 
             <div className='flex flex-col lg:flex-row items-center lg:justify-between mb-8'>
 
-                <h1 className='text-6xl tracking-widest mb-6'>
+                <h1 className=' text-4xl md:text-5xl lg:text-6xl tracking-widest uppercase mb-6'>
                     Skills
                 </h1>
 
