@@ -26,14 +26,14 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer className='bg-gray-400 py-10'>
+    <footer className='bg-surface border-t border-[rgba(240,96,48,0.12)] py-10'>
 
         <div className='px-[8%] lg:px-[5%]'>
 
             <div className='flex flex-col lg:flex-row justify-between'>
 
                 <div className='flex flex-col items-start lg:w-[40%]'>
-                    <h1 className='text-lg md:text-2xl lg:text-2xl font-extrabold text-white syne  text-shadow-sm text-shadow-muted'>Abhi<span className='text-surface-2'>.dev</span></h1>
+                    <h1 className='text-lg md:text-2xl lg:text-2xl font-extrabold text-white syne  text-shadow-xs text-shadow-blue-100'>Abhi<span className='text-muted'>.dev</span></h1>
                     <p className='text-muted text-base mt-1 font-semibold '>Passionate about creating modern web experiences that are clean, functional, and user-focused.</p>
                     <div className='flex flex-row gap-4 mt-2'>
                         <Link className="bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 
@@ -76,16 +76,16 @@ export default function Footer() {
                 </div>
             </div>
 
-            <hr className="mt-2 text-gray-700" />
+            <hr className="mt-2 text-muted" />
 
             <div className="flex flex-col lg:flex-row mt-4 items-center justify-between">
 
-                <p className="text-lg font-semibold text-center">
+                <p className="text-lg font-semibold text-muted text-center">
                     &copy; {new Date().getFullYear()} Abhi Solanki. All rights reserved
                 </p>
                 
-                <p className="text-lg font-semibold">
-                    Built and designed by <Link className="text-gray-800 hover:text-gray-500" href="https://github.com/Abhis1605" target="_blank">Abhis1605</Link>
+                <p className="text-lg text-muted font-semibold">
+                    Built and designed by <Link className="text-white hover:text-accent-warm" href="https://github.com/Abhis1605" target="_blank">Abhis1605</Link>
                 </p>
             </div>
 

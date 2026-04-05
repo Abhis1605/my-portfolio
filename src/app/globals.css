@@ -29,6 +29,11 @@
   --font-logo: var(--font-logo);
 }
 
+*{
+  scrollbar-width: thin;
+  scrollbar-color: #f06030 #0d0d0d;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -46,6 +51,24 @@ h1, h2, h3, h4 {
 .syne{
   font-family: var(--font-logo);
 }
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f06030;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e84d1c;
+}
+
 
 .hero-header{
   width: 100%;
