@@ -83,3 +83,27 @@ h1, h2, h3, h4 {
     min-height: 100vh;
   }
 }
+
+.timeline::after{
+  content: " ";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 50%;
+  margin-left: 9px;
+  z-index: 6;
+}
+
+@media (max-width: 1000px) {
+  .timeline::after{
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .timeline::after{
+    left: 0;
+  }
+}
