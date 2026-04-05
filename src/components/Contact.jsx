@@ -59,7 +59,7 @@ export default function Contact() {
     <section id="contact" className="py-10 lg:py-20">
       <div className="px-[8%] lg:px-[5%]">
         <div className="flex items-center flex-col lg:flex-row lg:justify-between">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl uppercase tracking-widest text-center mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl capitalize tracking-widest text-center mb-6">
             get - in touch
           </h1>
           <p className="text-muted text-center lg:text-justify  text-base lg:w-1/2">

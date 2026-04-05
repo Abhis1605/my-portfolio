@@ -4,12 +4,12 @@ import Link from 'next/link'
 
 export default function Projects() {
   return (
-    <section id='projects' className='py-10 lg:py-20 bg-[#0D0D0D]'>
+    <section id='projects' className='py-10 lg:py-20 bg-linear-to-br from-black via-accent-muted to-black'>
         <div className='px-[8%] lg:px-[5%]'>
 
             <div className='flex flex-col lg:flex-row items-center justify-between mb-5'>
 
-                <h1 className=' text-4xl md:text-5xl lg:text-6xl tracking-widest uppercase mb-6'>
+                <h1 className=' text-4xl md:text-5xl lg:text-6xl tracking-widest mb-6'>
                     Projects
                 </h1>
 

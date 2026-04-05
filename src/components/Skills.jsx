@@ -65,13 +65,13 @@ export default function Skills() {
         (skill) => activeCategory === "all" || skill.category === activeCategory
     )
   return (
-    <section id='skills' className='py-10 lg:py-20 bg-linear-to-br from-black via-accent-muted to-black'>
+    <section id='skills' className='py-10 lg:py-20'>
 
         <div className='px-[8%] lg:px-[5%]'>
 
             <div className='flex flex-col lg:flex-row items-center lg:justify-between mb-8'>
 
-                <h1 className=' text-4xl md:text-5xl lg:text-6xl tracking-widest uppercase mb-6'>
+                <h1 className=' text-4xl md:text-5xl lg:text-6xl tracking-widest mb-6'>
                     Skills
                 </h1>
 
@@ -89,13 +89,13 @@ export default function Skills() {
             </div>
 
 
-            <div className=' mt-10  grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6'>
+            <div className=' mt-10 lg:px-30 lg:py-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>
 
                 {filteredSkills.map((skill, key ) => (
-                    <div key={key} className='bg-surface-2 flex items-center flex-col p-4 rounded-md'>
-                        <div className='rounded-full w-18 h-18 flex items-center justify-center bg-orange-500 mb-3'>
+                    <div key={key} className='bg-surface-2 hover:scale-105 duration-300 transition-all flex items-center flex-col max-w-[200px] p-4 rounded-md'>
+                        <div className='rounded-full w-14 h-14 flex items-center justify-center bg-[#ff6a005e] border-2 border-[#ff6b004d] mb-3'>
 
-                            <Image src={skill.logo} width={50} height={50} alt='skill-logo' />
+                            <Image src={skill.logo} width={40} height={40} alt='skill-logo' />
 
                         </div>
                         <h4 className='text-lg text-center font-semibold text-gray-500 tracking-wider'>

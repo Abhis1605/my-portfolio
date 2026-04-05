@@ -1,5 +1,7 @@
+"use client"
 import { MoveUpRight } from 'lucide-react'
 import Link from 'next/link'
+import { TypeAnimation } from 'react-type-animation';
 import React from 'react'
 
 export default function Hero() {
@@ -16,7 +18,23 @@ export default function Hero() {
 
               <div >
                  <h3 className=' text-2xl md:text-5xl lg:text-4xl'>
-                  MERN STACK DEVELOPER
+                  <TypeAnimation
+      sequence={[
+        // Same substring at the start will only be typed out once, initially
+        'MERN Stack Developer',
+        1000, // wait 1s before replacing "Mice" with "Hamsters"
+        'Frontend Developer',
+        1000,
+        'Computer Engineer',
+        1000,
+        'Full-Stack Developer',
+        1000
+      ]}
+      wrapper="span"
+      speed={50}
+      style={{ fontSize: '1em', display: 'inline-block' }}
+      repeat={Infinity}
+    />
                 </h3>
                 <p className=' mt-2 mb-4 text-lg md:text-xl lg:text-[14px] md:max-w-140 lg:max-w-105  text-muted font-semibold'>
                   I’m currently pursuing computer engineering and working towards becoming a skilled web developer. I have experience with React, Node.js, and MongoDB, and I enjoy building projects that combine functionality with a clean user experience.

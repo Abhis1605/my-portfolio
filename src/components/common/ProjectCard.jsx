@@ -97,7 +97,7 @@ export default function ProjectCard() {
   return (
    <>
     {projects.map((project, index) => (
-      <div key={index} className='flex flex-col bg-[#141414] border-2 border-border rounded-md p-4'>
+      <div key={index} className='flex flex-col bg-[#141414] border-2 border-border shadow-lg shadow-white/10 rounded-2xl transition-all duration-300 p-4 hover:scale-95'>
 
         <div className='border-4 border-border rounded-md mb-3 overflow-hidden'>
           <div className=' relative w-full h-50' >
