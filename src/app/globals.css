@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #1F2120;
+  --background: #1f2120;
   --foreground: #f0ede8;
 
-  --accent: #f06030;        /* your primary orange */
-  --accent-warm: #e84d1c;   /* deeper orange for hover */
-  --accent-muted: #7a3018;  /* dark orange for subtle tints */
-  --surface: #141414;       /* card/section bg */
-  --surface-2: #1c1c1c;     /* elevated surface */
-  --muted: #5a5752;         /* placeholder / secondary text */
+  --accent: #f06030; /* your primary orange */
+  --accent-warm: #e84d1c; /* deeper orange for hover */
+  --accent-muted: #7a3018; /* dark orange for subtle tints */
+  --surface: #141414; /* card/section bg */
+  --surface-2: #1c1c1c; /* elevated surface */
+  --muted: #5a5752; /* placeholder / secondary text */
   --border: rgba(240, 96, 48, 0.15); /* orange-tinted borders */
 }
 
@@ -23,13 +23,13 @@
   --color-surface-2: var(--surface-2);
   --color-muted: var(--muted);
   --color-border: var(--border);
-  --font-display: var(--font-display); 
+  --font-display: var(--font-display);
   --font-body: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-logo: var(--font-logo);
 }
 
-*{
+* {
   scrollbar-width: thin;
   scrollbar-color: #f06030 #0d0d0d;
 }
@@ -41,14 +41,17 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family:var(--font-body), sans-serif;
+  font-family: var(--font-body), sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-display), serif;
 }
 
-.syne{
+.syne {
   font-family: var(--font-logo);
 }
 /* Custom scrollbar */
@@ -69,8 +72,7 @@ h1, h2, h3, h4 {
   background: #e84d1c;
 }
 
-
-.hero-header{
+.hero-header {
   width: 100%;
   min-height: 100vh;
   background-image: url("/hero-bg.png");
@@ -87,15 +89,14 @@ h1, h2, h3, h4 {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.8),
-    rgba(0,0,0,0.3),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.3),
     transparent
   );
 }
 
-
 @media (max-width: 1024px) {
-  .hero-header{
+  .hero-header {
     background-position: 50% center;
   }
 }
@@ -107,25 +108,36 @@ h1, h2, h3, h4 {
   }
 }
 
-.timeline::after{
+.timeline {
+  position: relative;
+  --line-progress: 0;
+}
+
+.timeline::after {
   content: " ";
   position: absolute;
   width: 6px;
   height: 100%;
-  background: #fff;
   top: 0;
   left: 50%;
   margin-left: 9px;
   z-index: 6;
+  border-radius: 9999px;
+
+  background: linear-gradient(
+    to bottom,
+    #f06030 0%,
+    #f06030 calc(var(--line-progress) * 100%),
+    #ffffff calc(var(--line-progress) * 100%),
+    #ffffff 100%
+  );
+
+  box-shadow:
+    0 0 8px rgba(240, 96, 48, 0.25),
+    0 0 16px rgba(240, 96, 48, 0.15);
 }
 
 @media (max-width: 1000px) {
-  .timeline::after{
-    left: 0;
-  }
-}
-
-@media screen and (max-width: 768px){
   .timeline::after{
     left: 0;
   }
