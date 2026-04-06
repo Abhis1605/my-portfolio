@@ -19,7 +19,7 @@ export default function Hero() {
   const bgY = useTransform(scrollYProgress, [0,1], [0, -20])
   return (
    <section id='home' ref={sectionRef}>
-    <motion.div style={shouldReduceMotion ? undefined : { y: bgY }} className='px-[8%] lg:px-[5%] hero-header' id='home'>
+    <motion.div  className='px-[8%] lg:px-[5%] hero-header' id='home'>
 
             <motion.div  style={shouldReduceMotion ? undefined : { y: heroY }} variants={staggerContainer} initial="hidden" animate="show"  className='z-20 mt-30 lg:mt-100 flex flex-col  lg:flex-row lg:items-end lg:justify-between  gap-4 md:gap-8 lg:gap-8'>
 
