@@ -39,7 +39,7 @@ export default function Navbar() {
             </nav>
 
             <div className="flex items-center gap-4">
-                <Link className="flex items-center gap-2 px-5 py-1 text-sm uppercase bg-transparent text-white border-2 hover:bg-white font-display tracking-widest hover:text-accent transition-all duration-300 hover:border-none hover:scale-95" href="/">
+                <Link className="flex items-center gap-2 px-5 py-1 text-sm uppercase bg-transparent text-white border-2 hover:bg-white font-display tracking-widest hover:text-accent transition-all duration-300 hover:border-none hover:scale-95" href="/resume/Abhi_Resume.pdf" target="_blank">
                     <MoveUpRight className="w-4 h-4 " />
                     Resume
                 </Link>

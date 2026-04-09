@@ -29,8 +29,8 @@ const projects = [
     image: "/projects/note-stack.png",
     tech: ["React", "Node.js","Express", "MongoDB", "Tailwind"],
     category: "frontend",
-    live: "https://dogverse.vercel.app",
-    github: "https://github.com/Abhis1605/dogverse",
+    live: "https://note-stack-frontend-kappa.vercel.app/",
+    github: "https://github.com/Abhis1605/notestack",
     learned: [
       "Building REST APIs",
       "Implementing authentication (login/signup)",
@@ -46,9 +46,8 @@ const projects = [
     image: "/projects/edunest.webp",
     tech: ["Next.js", "NextAuth", "MongoDB", "Tailwind", "ShadCN"],
     category: "fullstack",
-    live: "#",
-    github: "#",
-    featured: true,
+    live: "https://edunest-blue.vercel.app/",
+    github: "https://github.com/Abhis1605/edunest",
     learned: [
       "Understanding Next.js architecture",
       "Building APIs in Next.js",
@@ -65,8 +64,7 @@ const projects = [
     tech: ["React", "Tailwind"],
     category: "frontend",
     live: "https://eliteestat.netlify.app",
-    github: "#",
-    featured: false,
+    github: "https://github.com/Abhis1605/EliteEstate",
     learned: [
       "Designing modern UI with Tailwind",
       "Component-based architecture in React",
@@ -82,8 +80,7 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
     category: "frontend",
     live: "https://local-mart-kappa.vercel.app",
-    github: "#",
-    featured: false,
+    github: "https://github.com/Abhis1605/LocalMart/",
     learned: [
       "Working with pure JavaScript logic",
       "Implementing add to cart functionality",
