@@ -73,7 +73,7 @@ export default function Timeline() {
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ type: "spring", stiffness: 260, damping: 18 }}
                 viewport={{ once: true, amount: 0.6 }}
-                className={`w-4 h-4 bg-orange-400 rounded-full absolute top-8 z-10 left-1 ${
+                className={`w-4 h-4 bg-orange-400 rounded-full absolute top-8  z-10 left-1 ${
                   index % 2 === 0 ? "lg:left-[100.8%]" : "lg:left-1"
                 }`}
               />
