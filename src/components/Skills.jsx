@@ -21,10 +21,20 @@ const skills = [
     category: "languages",
     logo: "/skills-logo/js-logo.svg",
   },
+    {
+    name: "React.js",
+    category: "libraries",
+    logo: "/skills-logo/react-logo.png",
+  },
   {
     name: "Next.js",
     category: "frameworks",
     logo: "/skills-logo/nextjs-logo.png",
+  },
+  {
+    name: "Redux Toolkit",
+    category: "libraries",
+    logo: "/skills-logo/redux-logo.svg"
   },
   {
     name: "Express",
@@ -37,14 +47,14 @@ const skills = [
     logo: "/skills-logo/nodejs-logo.svg",
   },
   {
-    name: "React.js",
-    category: "libraries",
-    logo: "/skills-logo/react-logo.png",
-  },
-  {
     name: "Tailwind CSS",
     category: "libraries",
     logo: "/skills-logo/tailwind-css-logo.png",
+  },
+    {
+    name: "MongoDB",
+    category: "tools",
+    logo: "/skills-logo/mongodb-logo.svg",
   },
   {
     name: "Git",
@@ -52,10 +62,10 @@ const skills = [
     logo: "/skills-logo/git-logo.svg",
   },
   {
-    name: "MongoDB",
-    category: "tools",
-    logo: "/skills-logo/mongodb-logo.svg",
-  },
+    name: "Framer Motion",
+    category: "libraries",
+    logo: "/skills-logo/motion-logo.png"
+  }
 ];
 
 const categories = ["all", "languages", "frameworks", "libraries", "tools"];
