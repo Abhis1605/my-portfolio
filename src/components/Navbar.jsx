@@ -1,5 +1,5 @@
 'use client'
-import {  Menu, MoveUpRight } from "lucide-react"
+import {  Menu, MoveUpRight, X } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
@@ -21,7 +21,7 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
   return (
-    <div className={`w-full transition-all duration-500 fixed top-0 left-0 z-50 fixed-nav ${isFixed ? "bg-white/10 backdrop-blur-xs py-3" : "bg-transparent py-5 "}`}>
+    <div className={`w-full transition-all duration-500 fixed top-0 left-0 z-50  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 fixed-nav ${isFixed ? "bg-white/10 py-3" : "bg-transparent py-5 "}`}>
 
         <div className={`w-full flex items-center justify-between transition-all duration-500 ${isFixed ? "px-[8%] lg:px-[8%]" : "px-[8%] lg:px-[5%]"}`}>
 
@@ -32,7 +32,7 @@ export default function Navbar() {
             <nav className="hidden lg:flex space-x-5 menu-link relative z-40">
 
                 {navLinks.map((link) => (
-                    <Link key={link.label} href={link.href} className="font-display uppercase text-xs tracking-widest text-white hover:text-blue-600  font-bold transition-all duration-300">
+                    <Link key={link.label} href={link.href} className="font-display uppercase text-xs tracking-widest text-white hover:text-black  font-bold transition-all duration-300">
                         {link.label}
                     </Link>
                 ))}
@@ -47,17 +47,21 @@ export default function Navbar() {
 
             <div className="lg:hidden flex items-center justify-between gap-4">
                 <button className="text-2xl focus:outline-none" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-                    <Menu className="lg:w-5 lg:h-5" />
+                    { mobileMenuOpen ? (
+                        <X className="lg:w-5 lg:h-5 text-white" />
+                    ) : (
+                        <Menu className="lg:w-5 lg:h-5" />
+                    )}
                 </button>
             </div>
 
         </div>
 
         { mobileMenuOpen && (
-            <div className="lg:hidden bg-black border-t border-gray-500 mt-3 transition-all duration-500">
-                <div className="flex flex-col px-[8%] py-3 space-y-1">
+            <div className="lg:hidden bg-gray-800/30 border-t  border-gray-500 mt-3 transition-all duration-500  h-screen py-4">
+                <div className="flex flex-col px-[8%] py-3 space-y-1 text-2xl font-semibold">
                     {navLinks.map((link) => (
-                        <Link key={link.label} href={link.href}>
+                        <Link className="mb-5" key={link.label} href={link.href} onClick={() => setMobileMenuOpen(false)}>
                             {link.label}
                         </Link>
                     ))}
