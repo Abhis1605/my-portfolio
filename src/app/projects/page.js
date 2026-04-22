@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo } from "react";
+import { Suspense, useEffect, useMemo } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import ProjectCard from "@/components/common/ProjectCard";
@@ -15,7 +15,7 @@ const parsePage = (value) => {
   return Number.isInteger(page) && page > 0 ? page : 1;
 };
 
-export default function ProjectsPage() {
+function ProjectsPageContent() {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -177,5 +177,13 @@ export default function ProjectsPage() {
         </div>
       </div>
     </section>
+  );
+}
+
+export default function ProjectsPage() {
+  return (
+    <Suspense fallback={<section className="min-h-screen pt-28 pb-16 bg-linear-to-br from-black via-accent-muted to-black" />}>
+      <ProjectsPageContent />
+    </Suspense>
   );
 }
