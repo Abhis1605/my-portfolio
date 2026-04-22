@@ -8,6 +8,7 @@ import { projectsData } from "@/data/projectsData";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export default function Projects() {
+  const featuredProjects = projectsData.slice(0, 6)
   return (
     <section
       id="projects"
@@ -37,7 +38,7 @@ export default function Projects() {
           viewport={{ once: true, amount: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:p-10 gap-8 lg:gap-10 mb-10 lg:mb-0"
         >
-          {projectsData.map((project) => (
+          {featuredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </motion.div>

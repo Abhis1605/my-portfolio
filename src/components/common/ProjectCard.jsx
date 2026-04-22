@@ -92,6 +92,8 @@ const projects = [
 ]
 
 export default function ProjectCard({ project }) {
+  const hasLive = project.live && project.live.trim() !== "" && project.live !== "#"
+  const hasGithub = project.github && project.github.trim() !== "" && project.github !== "#"
   return (
     <motion.article
       initial={{ opacity: 0, y: 28, scale: 0.98 }}
@@ -135,20 +137,20 @@ export default function ProjectCard({ project }) {
       </div>
 
       <div className="flex mt-3 gap-3">
-        <Link
+        {hasLive && (<Link
           target="_blank"
           href={project.live}
           className="bg-background flex items-center justify-center rounded-full transition-all duration-300 w-10 h-10 hover:bg-accent hover:scale-95"
         >
           <ExternalLink className="w-5 h-5" />
-        </Link>
-        <Link
+        </Link>)}
+        {hasGithub &&(<Link
           className="bg-background flex items-center justify-center rounded-full transition-all duration-300 w-10 h-10 hover:bg-accent hover:scale-95"
           target="_blank"
           href={project.github}
         >
           <SiGithub className="w-5 h-5" />
-        </Link>
+        </Link>)}
       </div>
     </motion.article>
   );

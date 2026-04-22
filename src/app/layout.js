@@ -1,6 +1,8 @@
 import { DM_Sans, DM_Serif_Display, Syne} from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const dmSans = DM_Sans({
   variable: "--font-body",
@@ -30,7 +32,12 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${dmSans.variable} ${dmSerif.variable} ${syne.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
         <Toaster position="top-right" /> 
       </body>
     </html>
