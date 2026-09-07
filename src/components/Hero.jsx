@@ -47,8 +47,8 @@ export default function Hero() {
       repeat={Infinity}
     />
                 </motion.h3>
-                <motion.p variants={fadeUp} className=' mt-2 mb-4 text-lg md:text-xl lg:text-[14px] md:max-w-140 lg:max-w-105  text-muted font-semibold'>
-                  I’m currently pursuing computer engineering and working towards becoming a skilled web developer. I have experience with React, Node.js, and MongoDB, and I enjoy building projects that combine functionality with a clean user experience.
+                <motion.p variants={fadeUp} className=' mt-2 mb-4 text-xl lg:text-[16px] md:max-w-140 lg:max-w-105 text-gray-500 font-medium'>
+                  I’m a Computer Engineering graduate and Full Stack Engineer with experience in React, Node.js, and MongoDB. I’ve also worked with relational databases like MySQL and PostgreSQL, and I’m currently exploring Python and its frameworks.
                 </motion.p>
 
                  <motion.div variants={fadeUp} className=' w-fit flex flex-col md:flex-row lg:flex-row lg:items-center gap-4 md:gap-10 lg:gap-4'>

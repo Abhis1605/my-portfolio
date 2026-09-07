@@ -46,9 +46,7 @@ export default function Timeline() {
             variants={fadeUp}
             className="text-muted font-semibold text-center md:text-center lg:text-justify text-base w-full lg:w-1/2"
           >
-            I’m a computer engineering student and MERN stack developer with hands-on
-            experience through a 4-month internship, where I worked on building APIs,
-            UI components.
+            My journey in web development started with a 4-month MERN Stack internship, where I gained hands-on experience building APIs and UI components. After completing my Computer Engineering degree, I moved into a Full Stack Engineer role, where I continue building real-world applications while expanding my skills in Python and its ecosystem.
           </motion.p>
         </motion.div>
 

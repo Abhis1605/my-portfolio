@@ -12,10 +12,7 @@ export default function About() {
         <motion.div variants={staggerContainer} className="flex md:items-center lg:items-start  flex-col">
           <motion.h1 className=" text-4xl md:text-5xl lg:text-6xl text-center tracking-widest mb-6" variants={fadeUp}>About Me</motion.h1>
           <motion.p variants={fadeUp} className="text-center font-semibold lg:text-justify md:text-2xl lg:text-base text-muted  lg:w-[85%] mb-6">
-            I’m a computer engineering student and a MERN stack developer,
-            focused on building clean and functional web applications. I enjoy
-            working on real-world projects and continuously improving my
-            development skills.
+            I’m passionate about building clean, functional, and scalable web applications. I enjoy working on real-world projects, solving problems, and continuously improving my skills while learning and working with new technologies.
           </motion.p>
 
           <motion.div variants={scaleIn}>
